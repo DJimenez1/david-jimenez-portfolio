@@ -2,10 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta name="title" content="David Jimenez | Portfolio" />
+    <meta name="description" content="Full-stack developer portfolio showcasing projects built with React, Node.js, MongoDB, and more." />
+    <title>David Jimenez | Portfolio</title>
   </head>
+  <style>
+    html, body {
+      background-color: #181818; /* Match your intended background */
+    }
+    body {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  
+    body.ready {
+      opacity: 1;
+    }
+  </style>  
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>

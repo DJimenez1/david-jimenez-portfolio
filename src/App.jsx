@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const projects = [
   {
@@ -43,6 +44,30 @@ const projects = [
 ];
 
 export default function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoaded(true);
+      document.body.classList.add("ready");
+    };
+  
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);  
+
+  if (!isLoaded) {
+    return (
+      <div className="w-screen h-screen flex items-center justify-center bg-black text-white">
+        Loading...
+      </div>
+    );
+  }
+
   return (
     <main className="relative min-h-screen text-white px-4 py-10 bg-fixed">
       <div className="absolute inset-0 bg-[url('/freenaturestock-701.jpeg')] md:bg-[url('/freenaturestock-701.jpeg')] bg-cover bg-center z-0" />
@@ -51,7 +76,7 @@ export default function App() {
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 1.2 }}
           className="text-4xl md:text-5xl font-bold mb-2 text-center"
         >
           David Jimenez
@@ -86,11 +111,11 @@ export default function App() {
                 key={project.title}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 2, delay: index * 0.3 }}
+                transition={{ duration: 1.2, delay: index * 0.3 }}
                 viewport={{ once: true }}
                 className="h-full"
               >
-                <Card className="h-full hover:scale-[1.01] transition-transform w-full bg-white/5 backdrop-blur-md border border-white/20">
+                <Card className="h-full hover:scale-[1.01] transition-transform w-full bg-white/5 border border-white/20">
                   <CardContent className="p-6 flex flex-col justify-between h-full">
                     <div>
                       <h2 className="text-xl text-white font-semibold mb-2">
@@ -119,7 +144,7 @@ export default function App() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1.2 }}
           viewport={{ once: true }}
           className="mt-16 text-center backdrop-blur-sm bg-black/40 p-4 rounded-md mx-auto max-w-xl"
         >
