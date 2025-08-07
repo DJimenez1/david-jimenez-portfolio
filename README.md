@@ -1,12 +1,36 @@
-# React + Vite
+# David Jimenez | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A portfolio showcasing my full-stack development work, projects, and technical skillset.
 
-Currently, two official plugins are available:
+**Live Site:** [https://david-jimenez-portfolio.vercel.app](https://david-jimenez-portfolio.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, Vite, TailwindCSS, Framer Motion
+- **Design:** Mobile-first, dark mode, animated transitions
+- **Deployment:** Vercel
+
+---
+
+## Features
+
+- Highlighted projects with links to demos, source code, and documentation
+- Downloadable resume
+- Links to GitHub, LinkedIn, and email
+- Mobile-responsive background switching logic
+- Fade-in animations and loading state
+
+---
+
+## About Me
+
+I'm a computer engineer with a passion for building high-performance web apps, real-time systems, and machine learning tools. Check out my [LinkedIn](https://www.linkedin.com/in/david-jimenez-b863a7228/) for more!
+
+---
+
+## Contact
+
+- Email: djimenezahhs@gmail.com
+- GitHub: [DJimenez1](https://github.com/DJimenez1)
